@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAV-000-ROOT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="NAV-SCENE">
+            <objects>
+                <navigationController id="NAV-000-ROOT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV-BAR-001"/>
+                    <connections>
+                        <segue destination="WELCOME-VC-01" kind="relationship" relationship="rootViewController" id="NAV-REL-001"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV-FIRST-01" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="80"/>
+        </scene>
+        <scene sceneID="WELCOME-SCENE">
+            <objects>
+                <viewController id="WELCOME-VC-01" customClass="ViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WELCOME-VIEW-01">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Companion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="TITLE-LABEL-01">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Campus, In Your Pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="SUBTITLE-LABEL-01">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMAGE-VIEW-01">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="IMAGE-WIDTH-01"/>
+                                    <constraint firstAttribute="height" constant="110" id="IMAGE-HEIGHT-01"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Enter your name." clearsOnBeginEditing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAME-FIELD-01">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify me about events" translatesAutoresizingMaskIntoConstraints="NO" id="NOTIFY-LABEL-01">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" on="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOTIFY-SWITCH-01"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ROLE-SEGMENT-01">
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Faculty"/>
+                                </segments>
+                            </segmentedControl>
+                            <datePicker opaque="NO" contentMode="scaleToFill" datePickerMode="date" preferredDatePickerStyle="compact" translatesAutoresizingMaskIntoConstraints="NO" id="DATE-PICKER-01"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of guests" translatesAutoresizingMaskIntoConstraints="NO" id="GUEST-LABEL-01">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" value="1" minimumValue="1" maximumValue="10" stepValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GUEST-STEPPER-01"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="EXPLORE-BUTTON-01">
+                                <state key="normal" title="Explore Campus"/>
+                                <connections>
+                                    <action selector="exploreButtonTapped:" destination="WELCOME-VC-01" eventType="touchUpInside" id="EXPLORE-ACTION-01"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="START-BUTTON-01">
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStartedButtonTapped:" destination="WELCOME-VC-01" eventType="touchUpInside" id="START-ACTION-01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-AREA-01"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TITLE-LABEL-01" firstAttribute="top" secondItem="SAFE-AREA-01" secondAttribute="top" constant="28" id="TITLE-TOP-01"/>
+                            <constraint firstItem="TITLE-LABEL-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="20" id="TITLE-LEAD-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="TITLE-LABEL-01" secondAttribute="trailing" constant="20" id="TITLE-TRAIL-01"/>
+                            <constraint firstItem="SUBTITLE-LABEL-01" firstAttribute="top" secondItem="TITLE-LABEL-01" secondAttribute="bottom" constant="8" id="SUBTITLE-TOP-01"/>
+                            <constraint firstItem="SUBTITLE-LABEL-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="20" id="SUBTITLE-LEAD-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="SUBTITLE-LABEL-01" secondAttribute="trailing" constant="20" id="SUBTITLE-TRAIL-01"/>
+                            <constraint firstItem="IMAGE-VIEW-01" firstAttribute="top" secondItem="SUBTITLE-LABEL-01" secondAttribute="bottom" constant="28" id="IMAGE-TOP-01"/>
+                            <constraint firstItem="IMAGE-VIEW-01" firstAttribute="centerX" secondItem="SAFE-AREA-01" secondAttribute="centerX" id="IMAGE-CENTER-01"/>
+                            <constraint firstItem="NAME-FIELD-01" firstAttribute="top" secondItem="IMAGE-VIEW-01" secondAttribute="bottom" constant="20" id="NAME-TOP-01"/>
+                            <constraint firstItem="NAME-FIELD-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="32" id="NAME-LEAD-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="NAME-FIELD-01" secondAttribute="trailing" constant="32" id="NAME-TRAIL-01"/>
+                            <constraint firstItem="NOTIFY-LABEL-01" firstAttribute="top" secondItem="NAME-FIELD-01" secondAttribute="bottom" constant="12" id="NOTIFY-LABEL-TOP-01"/>
+                            <constraint firstItem="NOTIFY-LABEL-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="32" id="NOTIFY-LABEL-LEAD-01"/>
+                            <constraint firstItem="NOTIFY-SWITCH-01" firstAttribute="centerY" secondItem="NOTIFY-LABEL-01" secondAttribute="centerY" id="NOTIFY-SWITCH-CENTER-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="NOTIFY-SWITCH-01" secondAttribute="trailing" constant="28" id="NOTIFY-SWITCH-TRAIL-01"/>
+                            <constraint firstItem="ROLE-SEGMENT-01" firstAttribute="top" secondItem="NOTIFY-LABEL-01" secondAttribute="bottom" constant="12" id="ROLE-TOP-01"/>
+                            <constraint firstItem="ROLE-SEGMENT-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="32" id="ROLE-LEAD-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="ROLE-SEGMENT-01" secondAttribute="trailing" constant="32" id="ROLE-TRAIL-01"/>
+                            <constraint firstItem="DATE-PICKER-01" firstAttribute="top" secondItem="ROLE-SEGMENT-01" secondAttribute="bottom" constant="12" id="DATE-TOP-01"/>
+                            <constraint firstItem="DATE-PICKER-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="32" id="DATE-LEAD-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="DATE-PICKER-01" secondAttribute="trailing" constant="32" id="DATE-TRAIL-01"/>
+                            <constraint firstItem="GUEST-LABEL-01" firstAttribute="top" secondItem="DATE-PICKER-01" secondAttribute="bottom" constant="12" id="GUEST-LABEL-TOP-01"/>
+                            <constraint firstItem="GUEST-LABEL-01" firstAttribute="leading" secondItem="SAFE-AREA-01" secondAttribute="leading" constant="32" id="GUEST-LABEL-LEAD-01"/>
+                            <constraint firstItem="GUEST-STEPPER-01" firstAttribute="centerY" secondItem="GUEST-LABEL-01" secondAttribute="centerY" id="GUEST-STEPPER-CENTER-01"/>
+                            <constraint firstItem="SAFE-AREA-01" firstAttribute="trailing" secondItem="GUEST-STEPPER-01" secondAttribute="trailing" constant="20" id="GUEST-STEPPER-TRAIL-01"/>
+                            <constraint firstItem="EXPLORE-BUTTON-01" firstAttribute="top" secondItem="GUEST-LABEL-01" secondAttribute="bottom" constant="20" id="EXPLORE-TOP-01"/>
+                            <constraint firstItem="EXPLORE-BUTTON-01" firstAttribute="centerX" secondItem="SAFE-AREA-01" secondAttribute="centerX" id="EXPLORE-CENTER-01"/>
+                            <constraint firstItem="START-BUTTON-01" firstAttribute="top" secondItem="EXPLORE-BUTTON-01" secondAttribute="bottom" constant="20" id="START-TOP-01"/>
+                            <constraint firstItem="START-BUTTON-01" firstAttribute="centerX" secondItem="SAFE-AREA-01" secondAttribute="centerX" id="START-CENTER-01"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Campus Companion" id="WELCOME-NAV-ITEM"/>
+                    <connections>
+                        <outlet property="datePicker" destination="DATE-PICKER-01" id="OUTLET-DATE-01"/>
+                        <outlet property="guestStepper" destination="GUEST-STEPPER-01" id="OUTLET-GUEST-01"/>
+                        <outlet property="nameTextField" destination="NAME-FIELD-01" id="OUTLET-NAME-01"/>
+                        <outlet property="notifySwitch" destination="NOTIFY-SWITCH-01" id="OUTLET-NOTIFY-01"/>
+                        <outlet property="roleSegmentedControl" destination="ROLE-SEGMENT-01" id="OUTLET-ROLE-01"/>
+                        <outlet property="subtitleLabel" destination="SUBTITLE-LABEL-01" id="OUTLET-SUBTITLE-01"/>
+                        <outlet property="titleLabel" destination="TITLE-LABEL-01" id="OUTLET-TITLE-01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WELCOME-FIRST-01" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="80"/>
+        </scene>
+        <scene sceneID="DETAIL-SCENE">
+            <objects>
+                <viewController id="DETAIL-VC-01" customClass="DetailViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DETAIL-VIEW-01">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="MESSAGE-LABEL-01">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DETAIL-SAFE-01"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MESSAGE-LABEL-01" firstAttribute="leading" secondItem="DETAIL-SAFE-01" secondAttribute="leading" constant="24" id="MESSAGE-LEAD-01"/>
+                            <constraint firstItem="DETAIL-SAFE-01" firstAttribute="trailing" secondItem="MESSAGE-LABEL-01" secondAttribute="trailing" constant="24" id="MESSAGE-TRAIL-01"/>
+                            <constraint firstItem="MESSAGE-LABEL-01" firstAttribute="centerY" secondItem="DETAIL-SAFE-01" secondAttribute="centerY" id="MESSAGE-CENTER-01"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Campus Events" id="DETAIL-NAV-ITEM"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="MESSAGE-LABEL-01" id="OUTLET-MESSAGE-01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DETAIL-FIRST-01" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="80"/>
+        </scene>
+    </scenes>
+    <connections>
+        <segue destination="DETAIL-VC-01" kind="show" identifier="ShowDetailSegue" id="DETAIL-SEGUE-01"/>
+    </connections>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
