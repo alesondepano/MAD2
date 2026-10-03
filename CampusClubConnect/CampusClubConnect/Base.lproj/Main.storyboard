@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAV-00-000">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NAV-SC-001">
+            <objects>
+                <navigationController id="NAV-00-000" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV-BAR-00">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WEL-VC-000" kind="relationship" relationship="rootViewController" id="NAV-ROOT-1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV-FR-000" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000" y="0.0"/>
+        </scene>
+        <!--Campus Club Connect-->
+        <scene sceneID="WEL-SC-001">
+            <objects>
+                <viewController id="WEL-VC-000" customClass="WelcomeViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WEL-VW-000">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="WEL-STACK">
+                                <rect key="frame" x="24" y="123" width="345" height="495"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TITLE-LBL">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="TITLE-H-36"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="bold" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Find your people. Join your campus community." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="SUBTITLE-LBL">
+                                        <rect key="frame" x="0.0" y="50" width="345" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOGO-CONTAINER">
+                                        <rect key="frame" x="0.0" y="105" width="345" height="84"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LOGO-IMG">
+                                                <rect key="frame" x="130.5" y="0.0" width="84" height="84"/>
+                                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="LOGOC-H-84"/>
+                                            <constraint firstItem="LOGO-IMG" firstAttribute="centerX" secondItem="LOGO-CONTAINER" secondAttribute="centerX" id="LOGO-CX"/>
+                                            <constraint firstItem="LOGO-IMG" firstAttribute="centerY" secondItem="LOGO-CONTAINER" secondAttribute="centerY" id="LOGO-CY"/>
+                                            <constraint firstItem="LOGO-IMG" firstAttribute="width" constant="84" id="LOGO-W-84"/>
+                                            <constraint firstItem="LOGO-IMG" firstAttribute="height" constant="84" id="LOGO-H-84"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPACER-ONE">
+                                        <rect key="frame" x="0.0" y="203" width="345" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="SPACE-H-8"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAME-FLD">
+                                        <rect key="frame" x="0.0" y="225" width="345" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="NAME-H-44"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REMINDER-ROW">
+                                        <rect key="frame" x="0.0" y="283" width="345" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Send me meeting reminders" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REMINDER-LBL">
+                                                <rect key="frame" x="0.0" y="11.5" width="280" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REMINDER-SW">
+                                                <rect key="frame" x="280" y="6.5" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="REMINDER-H-44"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Choose your role" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROLE-LBL">
+                                        <rect key="frame" x="0.0" y="341" width="345" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ROLE-SEG">
+                                        <rect key="frame" x="0.0" y="376" width="345" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="ROLE-H-32"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Member"/>
+                                            <segment title="Officer"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPACER-TWO">
+                                        <rect key="frame" x="0.0" y="422" width="345" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="SPACE2-H-10"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="JOIN-BTN">
+                                        <rect key="frame" x="0.0" y="446" width="345" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JOIN-H-50"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Join the Club">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="joinButtonTapped:" destination="WEL-VC-000" eventType="touchUpInside" id="JOIN-ACT-1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WEL-SAFE-0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WEL-STACK" firstAttribute="top" secondItem="WEL-SAFE-0" secondAttribute="top" constant="20" id="STACK-TOP-20"/>
+                            <constraint firstItem="WEL-STACK" firstAttribute="leading" secondItem="WEL-SAFE-0" secondAttribute="leading" constant="24" id="STACK-LEAD-24"/>
+                            <constraint firstItem="WEL-SAFE-0" firstAttribute="trailing" secondItem="WEL-STACK" secondAttribute="trailing" constant="24" id="STACK-TRAIL-24"/>
+                            <constraint firstItem="WEL-SAFE-0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WEL-STACK" secondAttribute="bottom" constant="12" id="STACK-BOTTOM-12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Campus Club Connect" id="WEL-NAV-IT"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="NAME-FLD" id="OUT-NAME-1"/>
+                        <outlet property="reminderSwitch" destination="REMINDER-SW" id="OUT-REM-1"/>
+                        <outlet property="roleSegmentedControl" destination="ROLE-SEG" id="OUT-ROLE-1"/>
+                        <outlet property="titleLabel" destination="TITLE-LBL" id="OUT-TITLE-1"/>
+                        <segue destination="CON-VC-000" kind="show" identifier="ShowConfirmationSegue" id="SHOW-CONF-1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEL-FR-000" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="0.0"/>
+        </scene>
+        <!--Confirmation-->
+        <scene sceneID="CON-SC-001">
+            <objects>
+                <viewController id="CON-VC-000" customClass="ConfirmationViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CON-VW-000">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CONFIRM-IMG">
+                                <rect key="frame" x="156.5" y="187" width="80" height="80"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CONFIRM-W-80"/>
+                                    <constraint firstAttribute="height" constant="80" id="CONFIRM-H-80"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Confirmation message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="MESSAGE-LBL">
+                                <rect key="frame" x="32" y="299" width="329" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CON-SAFE-0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CONFIRM-IMG" firstAttribute="top" secondItem="CON-SAFE-0" secondAttribute="top" constant="84" id="CONFIRM-TOP-84"/>
+                            <constraint firstItem="CONFIRM-IMG" firstAttribute="centerX" secondItem="CON-SAFE-0" secondAttribute="centerX" id="CONFIRM-CENTER-X"/>
+                            <constraint firstItem="MESSAGE-LBL" firstAttribute="top" secondItem="CONFIRM-IMG" secondAttribute="bottom" constant="32" id="MESSAGE-TOP-32"/>
+                            <constraint firstItem="MESSAGE-LBL" firstAttribute="leading" secondItem="CON-SAFE-0" secondAttribute="leading" constant="32" id="MESSAGE-LEAD-32"/>
+                            <constraint firstItem="CON-SAFE-0" firstAttribute="trailing" secondItem="MESSAGE-LBL" secondAttribute="trailing" constant="32" id="MESSAGE-TRAIL-32"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Confirmation" id="CON-NAV-IT"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="MESSAGE-LBL" id="OUT-MESSAGE-1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CON-FR-000" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.3.fill" catalog="system" width="128" height="85"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
