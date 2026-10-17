@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25098" systemVersion="25A354" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CampusAnnouncement" representedClassName="CampusAnnouncement" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="NO" attributeType="String" defaultValueString=""/>
+        <attribute name="date" optional="NO" attributeType="String" defaultValueString=""/>
+        <attribute name="postedBy" optional="NO" attributeType="String" defaultValueString=""/>
+        <attribute name="priority" optional="NO" attributeType="String" defaultValueString="Normal"/>
+        <attribute name="title" optional="NO" attributeType="String" defaultValueString=""/>
+    </entity>
+</model>

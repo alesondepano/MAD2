@@ -1,0 +1,14 @@
+import CoreData
+
+@objc(CampusAnnouncement)
+public final class CampusAnnouncement: NSManagedObject {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<CampusAnnouncement> {
+        NSFetchRequest<CampusAnnouncement>(entityName: "CampusAnnouncement")
+    }
+
+    @NSManaged public var title: String
+    @NSManaged public var date: String
+    @NSManaged public var category: String
+    @NSManaged public var priority: String
+    @NSManaged public var postedBy: String
+}
